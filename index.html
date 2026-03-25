@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Missouri Kayaker Guide</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  :root {
+    --bg: #0d1925;
+    --surface: #132030;
+    --surface2: #1a2d40;
+    --border: #1e3a52;
+    --text: #d4e8f7;
+    --muted: #6b8fa8;
+    --safe: #22c55e;
+    --warn: #f59e0b;
+    --danger: #ef4444;
+    --unknown: #6b8fa8;
+    --accent: #38bdf8;
+    --font: 'IBM Plex Mono', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 14px; min-height: 100dvh; }
+
+  /* NAV */
+  nav { background: var(--surface); border-bottom: 1px solid var(--border); display: flex; align-items: center; padding: 0 16px; height: 52px; gap: 4px; position: sticky; top: 0; z-index: 100; }
+  nav .logo { color: var(--accent); font-weight: 700; font-size: 15px; margin-right: auto; letter-spacing: -0.5px; }
+  nav button { background: none; border: none; color: var(--muted); cursor: pointer; padding: 8px 12px; border-radius: 6px; font-family: var(--font); font-size: 13px; transition: all 0.15s; }
+  nav button.active, nav button:hover { background: var(--surface2); color: var(--text); }
+  nav button.active { color: var(--accent); }
+
+  /* SCREENS */
+  .screen { display: none; padding: 16px; max-width: 960px; margin: 0 auto; }
+  .screen.active { display: block; }
+
+  /* SEARCH */
+  .search-row { display: flex; gap: 8px; margin-bottom: 16px; }
+  input[type=search] { flex: 1; background: var(--surface); border: 1px solid var(--border); color: var(--text); padding: 10px 14px; border-radius: 8px; font-family: var(--font); font-size: 14px; outline: none; }
+  input[type=search]:focus { border-color: var(--accent); }
+  select.filter { background: var(--surface); border: 1px solid var(--border); color: var(--text); padding: 10px 12px; border-radius: 8px; font-family: var(--font); font-size: 13px; cursor: pointer; }
+
+  /* RIVER CARDS */
+  .cards { display: grid; gap: 10px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; cursor: pointer; transition: border-color 0.15s; display: flex; align-items: flex-start; gap: 12px; }
+  .card:hover { border-color: var(--accent); }
+  .card-body { flex: 1; min-width: 0; }
+  .card-name { font-weight: 700; font-size: 15px; margin-bottom: 2px; }
+  .card-loc { color: var(--muted); font-size: 12px; margin-bottom: 8px; }
+  .card-stats { display: flex; gap: 16px; font-size: 12px; color: var(--muted); }
+  .card-stats span b { color: var(--text); }
+
+  /* BADGES */
+  .badge { font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; flex-shrink: 0; margin-top: 2px; }
+  .badge-safe    { background: rgba(34,197,94,0.15);  color: var(--safe);    border: 1px solid rgba(34,197,94,0.3);  }
+  .badge-warning { background: rgba(245,158,11,0.15); color: var(--warn);    border: 1px solid rgba(245,158,11,0.3); }
+  .badge-danger  { background: rgba(239,68,68,0.15);  color: var(--danger);  border: 1px solid rgba(239,68,68,0.3);  }
+  .badge-unknown { background: rgba(107,143,168,0.15);color: var(--unknown); border: 1px solid rgba(107,143,168,0.3);}
+
+  /* DETAIL SCREEN */
+  .back-btn { background: none; border: 1px solid var(--border); color: var(--muted); cursor: pointer; padding: 8px 14px; border-radius: 6px; font-family: var(--font); font-size: 13px; margin-bottom: 16px; display: inline-flex; align-items: center; gap: 6px; }
+  .back-btn:hover { color: var(--text); border-color: var(--accent); }
+  .detail-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+  .detail-header h1 { font-size: 22px; font-weight: 700; flex: 1; }
+  .detail-header .loc { color: var(--muted); font-size: 13px; margin-top: 4px; }
+  .gauge-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 20px; }
+  .gauge-box { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 14px; }
+  .gauge-box .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+  .gauge-box .value { font-size: 22px; font-weight: 700; }
+  .gauge-box .unit { font-size: 11px; color: var(--muted); }
+  .gauge-box .sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .value-safe   { color: var(--safe); }
+  .value-warning{ color: var(--warn); }
+  .value-danger { color: var(--danger); }
+  .value-unknown{ color: var(--muted); }
+  .section-title { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 10px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+  .detail-section { margin-bottom: 20px; }
+  .info-text { color: var(--muted); line-height: 1.6; font-size: 13px; }
+  .hazard-text { color: #fbbf24; line-height: 1.6; font-size: 13px; }
+  .access-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 600px) { .access-cols { grid-template-columns: 1fr; } }
+  .access-list { list-style: none; }
+  .access-list li { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+  .access-list li:last-child { border-bottom: none; }
+  .access-list li .aname { font-weight: 600; margin-bottom: 2px; }
+  .access-list li .anotes { color: var(--muted); font-size: 12px; }
+  .usgs-link { display: inline-flex; align-items: center; gap: 6px; color: var(--accent); font-size: 12px; text-decoration: none; border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; }
+  .usgs-link:hover { background: var(--surface2); }
+  .updated-note { font-size: 11px; color: var(--muted); margin-top: 6px; }
+
+  /* MAP SCREEN */
+  #map { height: calc(100dvh - 100px); border-radius: 10px; border: 1px solid var(--border); }
+  .map-legend { display: flex; gap: 16px; margin-bottom: 10px; font-size: 12px; flex-wrap: wrap; }
+  .leg-item { display: flex; align-items: center; gap: 6px; }
+  .leg-dot { width: 10px; height: 10px; border-radius: 50%; }
+
+  /* SAFETY SCREEN */
+  .county-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+  .county-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+  .county-card h3 { font-size: 14px; font-weight: 700; margin-bottom: 12px; color: var(--accent); }
+  .county-card .ph { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+  .county-card .ph:last-child { border-bottom: none; }
+  .county-card .ph .role { color: var(--muted); }
+  .county-card .ph a { color: var(--text); text-decoration: none; }
+  .county-card .ph a:hover { color: var(--accent); }
+
+  /* MISC */
+  .updated-bar { background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; font-size: 11px; color: var(--muted); margin-bottom: 14px; display: flex; align-items: center; gap: 6px; }
+  .dot-live { width: 7px; height: 7px; border-radius: 50%; background: var(--safe); display: inline-block; }
+  .empty { color: var(--muted); text-align: center; padding: 40px; font-size: 13px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">⛵ MO Kayaker</div>
+  <button onclick="showScreen('home')" id="nav-home" class="active">Rivers</button>
+  <button onclick="showScreen('map')" id="nav-map">Map</button>
+  <button onclick="showScreen('safety')" id="nav-safety">Safety</button>
+</nav>
+
+<!-- HOME -->
+<div class="screen active" id="screen-home">
+  <div class="search-row">
+    <input type="search" id="search" placeholder="Search rivers..." oninput="renderCards()">
+    <select class="filter" id="filter-status" onchange="renderCards()">
+      <option value="">All conditions</option>
+      <option value="safe">Good</option>
+      <option value="warning">Caution</option>
+      <option value="danger">Danger</option>
+    </select>
+    <select class="filter" id="filter-region" onchange="renderCards()">
+      <option value="">All regions</option>
+    </select>
+  </div>
+  <div class="updated-bar" id="updated-bar" style="display:none">
+    <span class="dot-live"></span>
+    <span id="updated-text">Loading conditions...</span>
+  </div>
+  <div class="cards" id="cards"></div>
+</div>
+
+<!-- DETAIL -->
+<div class="screen" id="screen-detail">
+  <button class="back-btn" onclick="showScreen('home')">← Back</button>
+  <div id="detail-content"></div>
+</div>
+
+<!-- MAP -->
+<div class="screen" id="screen-map">
+  <div class="map-legend">
+    <div class="leg-item"><div class="leg-dot" style="background:var(--safe)"></div> Good</div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--warn)"></div> Caution</div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--danger)"></div> Danger</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#38bdf8"></div> Put-in</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#a78bfa"></div> Take-out</div>
+  </div>
+  <div id="map"></div>
+</div>
+
+<!-- SAFETY -->
+<div class="screen" id="screen-safety">
+  <p class="info-text" style="margin-bottom:16px">Emergency contacts for Missouri counties with popular float streams. Always file a float plan with someone onshore.</p>
+  <div class="county-grid" id="county-grid"></div>
+</div>
+
+<script>
+let RIVERS = [];
+let CONDITIONS = {};
+let map = null;
+
+const SAFETY = [
+  { county: 'Shannon County', sheriff: '573-226-3911', sar: '573-226-3911', hospital: 'Phelps Health — 573-364-3100' },
+  { county: 'Oregon County', sheriff: '417-778-7225', sar: '417-778-7225', hospital: 'Ozarks Medical Center — 417-256-9111' },
+  { county: 'Ripley County', sheriff: '573-996-3661', sar: '573-996-3661', hospital: 'Poplar Bluff Regional — 573-785-7721' },
+  { county: 'Camden County', sheriff: '573-346-2243', sar: '573-346-2243', hospital: 'Lake Regional Health — 573-348-8000' },
+  { county: 'Dallas County', sheriff: '417-345-2222', sar: '417-345-2222', hospital: 'Citizens Memorial — 417-326-6000' },
+  { county: 'Pulaski County', sheriff: '573-774-6196', sar: '573-774-6196', hospital: 'General Leonard Wood Army — 573-596-0414' },
+  { county: 'Crawford County', sheriff: '573-775-2502', sar: '573-775-2502', hospital: 'Phelps Health — 573-364-3100' },
+  { county: 'Franklin County', sheriff: '636-583-2560', sar: '636-583-2560', hospital: 'Washington University — 636-239-8000' },
+  { county: 'Texas County', sheriff: '417-967-3348', sar: '417-967-3348', hospital: 'Ozarks Medical Center — 417-256-9111' },
+];
+
+// Load data
+async function init() {
+  const [rivRes, condRes] = await Promise.allSettled([
+    fetch('data/rivers.json'),
+    fetch('data/conditions.json'),
+  ]);
+
+  if (rivRes.status === 'fulfilled' && rivRes.value.ok) {
+    RIVERS = await rivRes.value.json();
+  }
+  if (condRes.status === 'fulfilled' && condRes.value.ok) {
+    const cData = await condRes.value.json();
+    CONDITIONS = cData.conditions || {};
+    const d = new Date(cData.updated);
+    const ago = Math.round((Date.now() - d) / 60000);
+    document.getElementById('updated-bar').style.display = 'flex';
+    document.getElementById('updated-text').textContent =
+      `USGS data updated ${ago < 60 ? ago + 'm ago' : Math.round(ago/60) + 'h ago'}`;
+  }
+
+  populateRegionFilter();
+  renderCards();
+  renderSafety();
+}
+
+function getCondition(river) {
+  return CONDITIONS[river.id] || { status: 'unknown', label: 'No Data', level: null, flow: null, pct: null };
+}
+
+function badgeClass(status) {
+  return { safe: 'badge-safe', warning: 'badge-warning', danger: 'badge-danger' }[status] || 'badge-unknown';
+}
+
+function valueClass(status) {
+  return { safe: 'value-safe', warning: 'value-warning', danger: 'value-danger' }[status] || 'value-unknown';
+}
+
+function populateRegionFilter() {
+  const regions = [...new Set(RIVERS.map(r => r.region))].sort();
+  const sel = document.getElementById('filter-region');
+  regions.forEach(r => {
+    const o = document.createElement('option');
+    o.value = r; o.textContent = r;
+    sel.appendChild(o);
+  });
+}
+
+function renderCards() {
+  const q = document.getElementById('search').value.toLowerCase();
+  const st = document.getElementById('filter-status').value;
+  const reg = document.getElementById('filter-region').value;
+
+  let rivers = RIVERS.filter(r => {
+    const cond = getCondition(r);
+    if (q && !r.name.toLowerCase().includes(q) && !r.location.toLowerCase().includes(q) && !r.county.toLowerCase().includes(q)) return false;
+    if (st && cond.status !== st) return false;
+    if (reg && r.region !== reg) return false;
+    return true;
+  });
+
+  const container = document.getElementById('cards');
+  if (rivers.length === 0) {
+    container.innerHTML = '<div class="empty">No rivers match your filters.</div>';
+    return;
+  }
+
+  container.innerHTML = rivers.map(r => {
+    const c = getCondition(r);
+    const lvTxt = c.level != null ? `${c.level} ft` : '—';
+    const flTxt = c.flow != null ? `${c.flow.toLocaleString()} cfs` : '—';
+    const pctTxt = c.pct != null ? `${c.pct}% of flood` : '';
+    return `<div class="card" onclick="showDetail('${r.id}')">
+      <div class="card-body">
+        <div class="card-name">${r.name}</div>
+        <div class="card-loc">${r.location} · ${r.county} Co.</div>
+        <div class="card-stats">
+          <span><b>${lvTxt}</b> level</span>
+          <span><b>${flTxt}</b> flow</span>
+          ${pctTxt ? `<span>${pctTxt}</span>` : ''}
+        </div>
+      </div>
+      <span class="badge ${badgeClass(c.status)}">${c.label}</span>
+    </div>`;
+  }).join('');
+}
+
+function showDetail(id) {
+  const r = RIVERS.find(x => x.id === id);
+  if (!r) return;
+  const c = getCondition(r);
+  const lvTxt = c.level != null ? c.level + ' ft' : '—';
+  const flTxt = c.flow != null ? c.flow.toLocaleString() + ' cfs' : '—';
+  const pctTxt = c.pct != null ? c.pct + '%' : '—';
+  const vc = valueClass(c.status);
+
+  const putins = (r.access?.putin || []).map(p =>
+    `<li><div class="aname">${p.name}</div><div class="anotes">${p.notes}</div></li>`).join('');
+  const takeouts = (r.access?.takeout || []).map(p =>
+    `<li><div class="aname">${p.name}</div><div class="anotes">${p.notes}</div></li>`).join('');
+
+  document.getElementById('detail-content').innerHTML = `
+    <div class="detail-header">
+      <div>
+        <h1>${r.name}</h1>
+        <div class="loc">${r.location} · ${r.county} County · ${r.difficulty}</div>
+      </div>
+      <span class="badge ${badgeClass(c.status)}">${c.label}</span>
+    </div>
+    <div class="gauge-row">
+      <div class="gauge-box">
+        <div class="label">Gauge Height</div>
+        <div class="value ${vc}">${lvTxt}</div>
+        <div class="sub">Flood stage: ${r.flood_stage} ft</div>
+      </div>
+      <div class="gauge-box">
+        <div class="label">Discharge</div>
+        <div class="value ${vc}">${flTxt}</div>
+        <div class="sub">Flow rate</div>
+      </div>
+      <div class="gauge-box">
+        <div class="label">% of Flood</div>
+        <div class="value ${vc}">${pctTxt}</div>
+        <div class="sub">of ${r.flood_stage} ft flood stage</div>
+      </div>
+    </div>
+    <div class="detail-section">
+      <div class="section-title">About</div>
+      <p class="info-text">${r.description}</p>
+    </div>
+    <div class="detail-section">
+      <div class="section-title">⚠ Hazards</div>
+      <p class="hazard-text">${r.hazards}</p>
+    </div>
+    <div class="detail-section">
+      <div class="section-title">Access Points</div>
+      <div class="access-cols">
+        <div>
+          <div class="section-title" style="font-size:11px;margin-bottom:8px">Put-ins</div>
+          <ul class="access-list">${putins || '<li class="anotes">None listed</li>'}</ul>
+        </div>
+        <div>
+          <div class="section-title" style="font-size:11px;margin-bottom:8px">Take-outs</div>
+          <ul class="access-list">${takeouts || '<li class="anotes">None listed</li>'}</ul>
+        </div>
+      </div>
+    </div>
+    <div class="detail-section">
+      <div class="section-title">Live USGS Data</div>
+      <a class="usgs-link" href="https://waterdata.usgs.gov/nwis/uv?site_no=${r.usgs}" target="_blank" rel="noopener">
+        View real-time gauge #${r.usgs} ↗
+      </a>
+      <div class="updated-note">Conditions auto-updated every 6 hours from USGS WaterServices API</div>
+    </div>
+  `;
+  showScreen('detail');
+}
+
+function renderSafety() {
+  document.getElementById('county-grid').innerHTML = SAFETY.map(s => `
+    <div class="county-card">
+      <h3>${s.county}</h3>
+      <div class="ph"><span class="role">Sheriff</span><a href="tel:${s.sheriff}">${s.sheriff}</a></div>
+      <div class="ph"><span class="role">Search &amp; Rescue</span><a href="tel:${s.sar}">${s.sar}</a></div>
+      <div class="ph"><span class="role">Hospital</span><span style="font-size:12px;text-align:right">${s.hospital}</span></div>
+    </div>
+  `).join('');
+}
+
+let mapInit = false;
+function initMap() {
+  if (mapInit) return;
+  mapInit = true;
+  map = L.map('map', { zoomControl: true }).setView([37.5, -91.5], 7);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://openstreetmap.org">OpenStreetMap</a>',
+    maxZoom: 18,
+  }).addTo(map);
+
+  const statusColor = { safe: '#22c55e', warning: '#f59e0b', danger: '#ef4444', unknown: '#6b8fa8' };
+
+  RIVERS.forEach(r => {
+    const c = getCondition(r);
+    const color = statusColor[c.status] || statusColor.unknown;
+
+    // Access point markers
+    (r.access?.putin || []).forEach(p => {
+      if (!p.lat) return;
+      L.circleMarker([p.lat, p.lng], { radius: 7, fillColor: '#38bdf8', color: '#0d1925', weight: 1.5, fillOpacity: 0.9 })
+        .addTo(map)
+        .bindPopup(`<b>${p.name}</b><br><span style="color:#888;font-size:12px">Put-in · ${r.name}</span><br><span style="font-size:12px">${p.notes}</span>`);
+    });
+
+    (r.access?.takeout || []).forEach(p => {
+      if (!p.lat) return;
+      L.circleMarker([p.lat, p.lng], { radius: 7, fillColor: '#a78bfa', color: '#0d1925', weight: 1.5, fillOpacity: 0.9 })
+        .addTo(map)
+        .bindPopup(`<b>${p.name}</b><br><span style="color:#888;font-size:12px">Take-out · ${r.name}</span><br><span style="font-size:12px">${p.notes}</span>`);
+    });
+  });
+}
+
+function showScreen(name) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+  document.getElementById('screen-' + name).classList.add('active');
+  const navBtn = document.getElementById('nav-' + name);
+  if (navBtn) navBtn.classList.add('active');
+  if (name === 'map') {
+    initMap();
+    setTimeout(() => map && map.invalidateSize(), 100);
+  }
+}
+
+init();
+</script>
+</body>
+</html>
