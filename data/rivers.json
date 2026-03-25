@@ -5,29 +5,99 @@
     "location": "Montauk to Van Buren",
     "county": "Shannon",
     "region": "Ozarks",
-    "usgs": "07064500",
+    "usgs": "07067000",
     "flood_stage": 8.0,
-    "difficulty": "Class I–II",
+    "difficulty": "Class I\u2013II",
     "description": "One of Missouri's most popular float streams. Cold, clear spring-fed water year-round. Ozark National Scenic Riverways.",
     "hazards": "Strainers near Akers. Rocky shoals at low water. Strong current near Big Spring confluence.",
     "access": {
       "putin": [
-        {"name": "Montauk State Park", "notes": "Concrete ramp, restrooms, trout hatchery", "lat": 37.4555, "lng": -91.6676},
-        {"name": "Cedargrove", "notes": "MDC gravel bar", "lat": 37.4210, "lng": -91.6320},
-        {"name": "Akers Ferry", "notes": "Private outfitter, gravel ramp", "lat": 37.3741, "lng": -91.5685},
-        {"name": "Pulltite", "notes": "NPS gravel bar, camping, spring", "lat": 37.3395, "lng": -91.5338},
-        {"name": "Round Spring", "notes": "NPS, restrooms, camping, cave tours", "lat": 37.2972, "lng": -91.4817},
-        {"name": "Two Rivers", "notes": "Jacks Fork confluence, NPS gravel", "lat": 37.1823, "lng": -91.4101}
+        {
+          "name": "Montauk State Park",
+          "notes": "Concrete ramp, restrooms, trout hatchery",
+          "lat": 37.4555,
+          "lng": -91.6676
+        },
+        {
+          "name": "Cedargrove",
+          "notes": "MDC gravel bar",
+          "lat": 37.421,
+          "lng": -91.632
+        },
+        {
+          "name": "Akers Ferry",
+          "notes": "Private outfitter, gravel ramp",
+          "lat": 37.3741,
+          "lng": -91.5685
+        },
+        {
+          "name": "Pulltite",
+          "notes": "NPS gravel bar, camping, spring",
+          "lat": 37.3395,
+          "lng": -91.5338
+        },
+        {
+          "name": "Round Spring",
+          "notes": "NPS, restrooms, camping, cave tours",
+          "lat": 37.2972,
+          "lng": -91.4817
+        },
+        {
+          "name": "Two Rivers",
+          "notes": "Jacks Fork confluence, NPS gravel",
+          "lat": 37.1823,
+          "lng": -91.4101
+        }
       ],
       "takeout": [
-        {"name": "Akers Ferry", "notes": "Private outfitter, gravel ramp", "lat": 37.3741, "lng": -91.5685},
-        {"name": "Pulltite", "notes": "NPS gravel bar, camping, spring", "lat": 37.3395, "lng": -91.5338},
-        {"name": "Round Spring", "notes": "NPS, restrooms, camping, cave tours", "lat": 37.2972, "lng": -91.4817},
-        {"name": "Two Rivers", "notes": "Jacks Fork confluence, NPS gravel", "lat": 37.1823, "lng": -91.4101},
-        {"name": "Powder Mill", "notes": "NPS concrete ramp, restrooms", "lat": 37.1512, "lng": -91.3844},
-        {"name": "Eminence City Park", "notes": "MDC sand bank, restrooms", "lat": 37.1504, "lng": -91.3579},
-        {"name": "Big Spring", "notes": "NPS paved ramp, restrooms, ranger station", "lat": 36.9619, "lng": -91.2370},
-        {"name": "Van Buren City Park", "notes": "Concrete ramp", "lat": 36.9946, "lng": -91.0160}
+        {
+          "name": "Akers Ferry",
+          "notes": "Private outfitter, gravel ramp",
+          "lat": 37.3741,
+          "lng": -91.5685
+        },
+        {
+          "name": "Pulltite",
+          "notes": "NPS gravel bar, camping, spring",
+          "lat": 37.3395,
+          "lng": -91.5338
+        },
+        {
+          "name": "Round Spring",
+          "notes": "NPS, restrooms, camping, cave tours",
+          "lat": 37.2972,
+          "lng": -91.4817
+        },
+        {
+          "name": "Two Rivers",
+          "notes": "Jacks Fork confluence, NPS gravel",
+          "lat": 37.1823,
+          "lng": -91.4101
+        },
+        {
+          "name": "Powder Mill",
+          "notes": "NPS concrete ramp, restrooms",
+          "lat": 37.1512,
+          "lng": -91.3844
+        },
+        {
+          "name": "Eminence City Park",
+          "notes": "MDC sand bank, restrooms",
+          "lat": 37.1504,
+          "lng": -91.3579
+        },
+        {
+          "name": "Big Spring",
+          "notes": "NPS paved ramp, restrooms, ranger station",
+          "lat": 36.9619,
+          "lng": -91.237
+        },
+        {
+          "name": "Van Buren City Park",
+          "notes": "Concrete ramp",
+          "lat": 36.9946,
+          "lng": -91.016
+        }
       ]
     }
   },
@@ -39,18 +109,43 @@
     "region": "Ozarks",
     "usgs": "07065200",
     "flood_stage": 7.0,
-    "difficulty": "Class I–II",
+    "difficulty": "Class I\u2013II",
     "description": "Scenic tributary of the Current River. Alley Spring Mill is a landmark put-in. Ozark National Scenic Riverways.",
     "hazards": "Rocky at low water. Log jams near lower section. Flash flooding possible.",
     "access": {
       "putin": [
-        {"name": "Alley Spring", "notes": "NPS, historic mill, restrooms, camping", "lat": 37.1820, "lng": -91.4520},
-        {"name": "Eminence City Park", "notes": "MDC, restrooms", "lat": 37.1504, "lng": -91.3579},
-        {"name": "Buck Hollow", "notes": "MDC gravel bar", "lat": 37.1620, "lng": -91.4000}
+        {
+          "name": "Alley Spring",
+          "notes": "NPS, historic mill, restrooms, camping",
+          "lat": 37.182,
+          "lng": -91.452
+        },
+        {
+          "name": "Eminence City Park",
+          "notes": "MDC, restrooms",
+          "lat": 37.1504,
+          "lng": -91.3579
+        },
+        {
+          "name": "Buck Hollow",
+          "notes": "MDC gravel bar",
+          "lat": 37.162,
+          "lng": -91.4
+        }
       ],
       "takeout": [
-        {"name": "Eminence City Park", "notes": "MDC, restrooms", "lat": 37.1504, "lng": -91.3579},
-        {"name": "Two Rivers", "notes": "Current River confluence, NPS gravel", "lat": 37.1823, "lng": -91.4101}
+        {
+          "name": "Eminence City Park",
+          "notes": "MDC, restrooms",
+          "lat": 37.1504,
+          "lng": -91.3579
+        },
+        {
+          "name": "Two Rivers",
+          "notes": "Current River confluence, NPS gravel",
+          "lat": 37.1823,
+          "lng": -91.4101
+        }
       ]
     }
   },
@@ -62,19 +157,49 @@
     "region": "Ozarks",
     "usgs": "07071000",
     "flood_stage": 9.0,
-    "difficulty": "Class I–II",
+    "difficulty": "Class I\u2013II",
     "description": "Nationally designated wild and scenic river. Less crowded than Current. Crystal clear, spring-fed.",
-    "hazards": "Several swift shoals. Gravel bars shift seasonally. Remote sections — plan accordingly.",
+    "hazards": "Several swift shoals. Gravel bars shift seasonally. Remote sections \u2014 plan accordingly.",
     "access": {
       "putin": [
-        {"name": "Thomasville", "notes": "MDC access, gravel ramp", "lat": 36.8710, "lng": -91.5280},
-        {"name": "Greer Crossing", "notes": "USFS campground, gravel bar", "lat": 36.8440, "lng": -91.4510},
-        {"name": "Turner Mill North", "notes": "USFS, swimming hole", "lat": 36.8230, "lng": -91.4180}
+        {
+          "name": "Thomasville",
+          "notes": "MDC access, gravel ramp",
+          "lat": 36.871,
+          "lng": -91.528
+        },
+        {
+          "name": "Greer Crossing",
+          "notes": "USFS campground, gravel bar",
+          "lat": 36.844,
+          "lng": -91.451
+        },
+        {
+          "name": "Turner Mill North",
+          "notes": "USFS, swimming hole",
+          "lat": 36.823,
+          "lng": -91.418
+        }
       ],
       "takeout": [
-        {"name": "Greer Crossing", "notes": "USFS campground, gravel bar", "lat": 36.8440, "lng": -91.4510},
-        {"name": "Turner Mill South", "notes": "USFS", "lat": 36.8100, "lng": -91.4020},
-        {"name": "Riverton", "notes": "MDC access", "lat": 36.7680, "lng": -91.3590}
+        {
+          "name": "Greer Crossing",
+          "notes": "USFS campground, gravel bar",
+          "lat": 36.844,
+          "lng": -91.451
+        },
+        {
+          "name": "Turner Mill South",
+          "notes": "USFS",
+          "lat": 36.81,
+          "lng": -91.402
+        },
+        {
+          "name": "Riverton",
+          "notes": "MDC access",
+          "lat": 36.768,
+          "lng": -91.359
+        }
       ]
     }
   },
@@ -86,18 +211,43 @@
     "region": "Ozarks",
     "usgs": "06923500",
     "flood_stage": 12.0,
-    "difficulty": "Class I–II",
+    "difficulty": "Class I\u2013II",
     "description": "Popular float near Bennett Spring State Park. Trout fishing excellent. Flows into Lake of the Ozarks.",
     "hazards": "Strainers in upper section. Old dam remains near lower stretch. Can run high after rain.",
     "access": {
       "putin": [
-        {"name": "Bennett Spring State Park", "notes": "Concrete ramp, restrooms, trout park", "lat": 37.7185, "lng": -92.8453},
-        {"name": "Hwy 64 Bridge", "notes": "MDC gravel bar", "lat": 37.7420, "lng": -92.7890}
+        {
+          "name": "Bennett Spring State Park",
+          "notes": "Concrete ramp, restrooms, trout park",
+          "lat": 37.7185,
+          "lng": -92.8453
+        },
+        {
+          "name": "Hwy 64 Bridge",
+          "notes": "MDC gravel bar",
+          "lat": 37.742,
+          "lng": -92.789
+        }
       ],
       "takeout": [
-        {"name": "Hwy 64 Bridge", "notes": "MDC gravel bar", "lat": 37.7420, "lng": -92.7890},
-        {"name": "Hwy 7 Bridge", "notes": "MDC gravel bar", "lat": 37.8010, "lng": -92.7240},
-        {"name": "Lake Niangua Access", "notes": "MDC boat ramp", "lat": 37.8460, "lng": -92.6810}
+        {
+          "name": "Hwy 64 Bridge",
+          "notes": "MDC gravel bar",
+          "lat": 37.742,
+          "lng": -92.789
+        },
+        {
+          "name": "Hwy 7 Bridge",
+          "notes": "MDC gravel bar",
+          "lat": 37.801,
+          "lng": -92.724
+        },
+        {
+          "name": "Lake Niangua Access",
+          "notes": "MDC boat ramp",
+          "lat": 37.846,
+          "lng": -92.681
+        }
       ]
     }
   },
@@ -111,17 +261,47 @@
     "flood_stage": 18.0,
     "difficulty": "Class I",
     "description": "Missouri's longest in-state river. Winds through the Ozarks before joining the Missouri River at Hermann.",
-    "hazards": "Large river — strong current when high. Limited access points in middle sections.",
+    "hazards": "Large river \u2014 strong current when high. Limited access points in middle sections.",
     "access": {
       "putin": [
-        {"name": "Licking", "notes": "MDC access", "lat": 37.5010, "lng": -91.8560},
-        {"name": "Jerome", "notes": "MDC gravel bar", "lat": 37.9200, "lng": -91.9760},
-        {"name": "Gasconade City Park", "notes": "Concrete ramp, restrooms", "lat": 38.0120, "lng": -91.5450}
+        {
+          "name": "Licking",
+          "notes": "MDC access",
+          "lat": 37.501,
+          "lng": -91.856
+        },
+        {
+          "name": "Jerome",
+          "notes": "MDC gravel bar",
+          "lat": 37.92,
+          "lng": -91.976
+        },
+        {
+          "name": "Gasconade City Park",
+          "notes": "Concrete ramp, restrooms",
+          "lat": 38.012,
+          "lng": -91.545
+        }
       ],
       "takeout": [
-        {"name": "Jerome", "notes": "MDC gravel bar", "lat": 37.9200, "lng": -91.9760},
-        {"name": "Gasconade City Park", "notes": "Concrete ramp, restrooms", "lat": 38.0120, "lng": -91.5450},
-        {"name": "Hermann", "notes": "City ramp on Missouri River", "lat": 38.7040, "lng": -91.4380}
+        {
+          "name": "Jerome",
+          "notes": "MDC gravel bar",
+          "lat": 37.92,
+          "lng": -91.976
+        },
+        {
+          "name": "Gasconade City Park",
+          "notes": "Concrete ramp, restrooms",
+          "lat": 38.012,
+          "lng": -91.545
+        },
+        {
+          "name": "Hermann",
+          "notes": "City ramp on Missouri River",
+          "lat": 38.704,
+          "lng": -91.438
+        }
       ]
     }
   },
@@ -135,17 +315,47 @@
     "flood_stage": 20.0,
     "difficulty": "Class I",
     "description": "Closest Ozark float stream to St. Louis. Popular weekend destination. Meramec State Park near Sullivan.",
-    "hazards": "Heavy boat traffic on lower reaches. Low-water bridges. Floods quickly after rain — check before going.",
+    "hazards": "Heavy boat traffic on lower reaches. Low-water bridges. Floods quickly after rain \u2014 check before going.",
     "access": {
       "putin": [
-        {"name": "Steelville City Park", "notes": "Concrete ramp, restrooms", "lat": 37.9626, "lng": -91.3593},
-        {"name": "Meramec State Park", "notes": "MDC, restrooms, camping, canoe rental", "lat": 38.2046, "lng": -91.0460},
-        {"name": "Hwy 30 at Gray Summit", "notes": "MDC access", "lat": 38.4940, "lng": -90.8150}
+        {
+          "name": "Steelville City Park",
+          "notes": "Concrete ramp, restrooms",
+          "lat": 37.9626,
+          "lng": -91.3593
+        },
+        {
+          "name": "Meramec State Park",
+          "notes": "MDC, restrooms, camping, canoe rental",
+          "lat": 38.2046,
+          "lng": -91.046
+        },
+        {
+          "name": "Hwy 30 at Gray Summit",
+          "notes": "MDC access",
+          "lat": 38.494,
+          "lng": -90.815
+        }
       ],
       "takeout": [
-        {"name": "Meramec State Park", "notes": "MDC, restrooms, camping", "lat": 38.2046, "lng": -91.0460},
-        {"name": "Castlewood Access", "notes": "MDC, gravel bar", "lat": 38.5490, "lng": -90.4620},
-        {"name": "Valley Park", "notes": "City ramp, Missouri River confluence area", "lat": 38.5530, "lng": -90.4900}
+        {
+          "name": "Meramec State Park",
+          "notes": "MDC, restrooms, camping",
+          "lat": 38.2046,
+          "lng": -91.046
+        },
+        {
+          "name": "Castlewood Access",
+          "notes": "MDC, gravel bar",
+          "lat": 38.549,
+          "lng": -90.462
+        },
+        {
+          "name": "Valley Park",
+          "notes": "City ramp, Missouri River confluence area",
+          "lat": 38.553,
+          "lng": -90.49
+        }
       ]
     }
   },
@@ -157,17 +367,37 @@
     "region": "Ozarks",
     "usgs": "06926510",
     "flood_stage": 10.0,
-    "difficulty": "Class I–II",
+    "difficulty": "Class I\u2013II",
     "description": "Fast, clear Ozark stream through remote forest. Less commercial than Current. Fort Leonard Wood area.",
-    "hazards": "Rocky shoals frequent. Some military land along banks — stay on water. Log jams in upper stretches.",
+    "hazards": "Rocky shoals frequent. Some military land along banks \u2014 stay on water. Log jams in upper stretches.",
     "access": {
       "putin": [
-        {"name": "Slabtown Access", "notes": "MDC gravel bar", "lat": 37.5890, "lng": -91.9870},
-        {"name": "Lane Spring", "notes": "MDC campground and access", "lat": 37.6720, "lng": -92.0320}
+        {
+          "name": "Slabtown Access",
+          "notes": "MDC gravel bar",
+          "lat": 37.589,
+          "lng": -91.987
+        },
+        {
+          "name": "Lane Spring",
+          "notes": "MDC campground and access",
+          "lat": 37.672,
+          "lng": -92.032
+        }
       ],
       "takeout": [
-        {"name": "Lane Spring", "notes": "MDC campground and access", "lat": 37.6720, "lng": -92.0320},
-        {"name": "Hwy 17 Bridge", "notes": "MDC gravel bar", "lat": 37.7050, "lng": -92.0780}
+        {
+          "name": "Lane Spring",
+          "notes": "MDC campground and access",
+          "lat": 37.672,
+          "lng": -92.032
+        },
+        {
+          "name": "Hwy 17 Bridge",
+          "notes": "MDC gravel bar",
+          "lat": 37.705,
+          "lng": -92.078
+        }
       ]
     }
   },
@@ -184,10 +414,20 @@
     "hazards": "Very shallow at low water. Some urban debris near town access.",
     "access": {
       "putin": [
-        {"name": "Waynesville City Park", "notes": "Free parking, restrooms", "lat": 37.8260, "lng": -92.2010}
+        {
+          "name": "Waynesville City Park",
+          "notes": "Free parking, restrooms",
+          "lat": 37.826,
+          "lng": -92.201
+        }
       ],
       "takeout": [
-        {"name": "Hwy 17 Bridge", "notes": "Gravel bar pulloff", "lat": 37.8050, "lng": -92.1980}
+        {
+          "name": "Hwy 17 Bridge",
+          "notes": "Gravel bar pulloff",
+          "lat": 37.805,
+          "lng": -92.198
+        }
       ]
     }
   },
@@ -204,12 +444,32 @@
     "hazards": "Agricultural runoff after rain. Some strainers. Floods significantly.",
     "access": {
       "putin": [
-        {"name": "Union Access", "notes": "MDC gravel ramp", "lat": 38.4482, "lng": -91.0093},
-        {"name": "St. Clair", "notes": "City park access", "lat": 38.3476, "lng": -90.9782}
+        {
+          "name": "Union Access",
+          "notes": "MDC gravel ramp",
+          "lat": 38.4482,
+          "lng": -91.0093
+        },
+        {
+          "name": "St. Clair",
+          "notes": "City park access",
+          "lat": 38.3476,
+          "lng": -90.9782
+        }
       ],
       "takeout": [
-        {"name": "St. Clair", "notes": "City park access", "lat": 38.3476, "lng": -90.9782},
-        {"name": "Hwy 50 Bridge", "notes": "MDC access", "lat": 38.4800, "lng": -91.0600}
+        {
+          "name": "St. Clair",
+          "notes": "City park access",
+          "lat": 38.3476,
+          "lng": -90.9782
+        },
+        {
+          "name": "Hwy 50 Bridge",
+          "notes": "MDC access",
+          "lat": 38.48,
+          "lng": -91.06
+        }
       ]
     }
   },
@@ -219,19 +479,39 @@
     "location": "Davisville to Meramec confluence",
     "county": "Crawford",
     "region": "Ozarks",
-    "usgs": "07012600",
+    "usgs": "07014000",
     "flood_stage": 7.0,
-    "difficulty": "Class I–II",
+    "difficulty": "Class I\u2013II",
     "description": "Beautiful clear-water creek. Gravel bars, bluffs, and springs. Joins Meramec near Steelville.",
-    "hazards": "Rocky and technical at low water. Flash floods possible. Some private land — use established accesses.",
+    "hazards": "Rocky and technical at low water. Flash floods possible. Some private land \u2014 use established accesses.",
     "access": {
       "putin": [
-        {"name": "Davisville", "notes": "MDC access, gravel bar", "lat": 37.8856, "lng": -91.2034},
-        {"name": "Hwy E Bridge", "notes": "Gravel bar", "lat": 37.9120, "lng": -91.2580}
+        {
+          "name": "Davisville",
+          "notes": "MDC access, gravel bar",
+          "lat": 37.8856,
+          "lng": -91.2034
+        },
+        {
+          "name": "Hwy E Bridge",
+          "notes": "Gravel bar",
+          "lat": 37.912,
+          "lng": -91.258
+        }
       ],
       "takeout": [
-        {"name": "Hwy E Bridge", "notes": "Gravel bar", "lat": 37.9120, "lng": -91.2580},
-        {"name": "Meramec confluence", "notes": "MDC access near Steelville", "lat": 37.9580, "lng": -91.3200}
+        {
+          "name": "Hwy E Bridge",
+          "notes": "Gravel bar",
+          "lat": 37.912,
+          "lng": -91.258
+        },
+        {
+          "name": "Meramec confluence",
+          "notes": "MDC access near Steelville",
+          "lat": 37.958,
+          "lng": -91.32
+        }
       ]
     }
   }
