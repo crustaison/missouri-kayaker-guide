@@ -1,11 +1,11 @@
 {
-  "updated": "2026-03-26T11:07:27Z",
+  "updated": "2026-03-26T17:12:27Z",
   "conditions": {
     "current": {
-      "level": 3.51,
-      "flow": 1460.0,
+      "level": 3.5,
+      "flow": 1450.0,
       "flood_stage": 8.0,
-      "pct": 43.9,
+      "pct": 43.8,
       "status": "safe",
       "label": "Good"
     },
@@ -26,42 +26,42 @@
       "label": "Good"
     },
     "niangua": {
-      "level": 1.8,
-      "flow": 132.0,
+      "level": 1.79,
+      "flow": 130.0,
       "flood_stage": 12.0,
-      "pct": 15.0,
+      "pct": 14.9,
       "status": "safe",
       "label": "Good"
     },
     "gasconade": {
-      "level": 3.12,
-      "flow": 345.0,
+      "level": 3.11,
+      "flow": 342.0,
       "flood_stage": 18.0,
       "pct": 17.3,
       "status": "safe",
       "label": "Good"
     },
     "meramec": {
-      "level": 2.56,
-      "flow": 67.6,
+      "level": 2.55,
+      "flow": 66.2,
       "flood_stage": 20.0,
       "pct": 12.8,
       "status": "safe",
       "label": "Good"
     },
     "bigpiney": {
-      "level": 4.13,
-      "flow": 4510.0,
+      "level": 4.11,
+      "flow": 4460.0,
       "flood_stage": 10.0,
-      "pct": 41.3,
+      "pct": 41.1,
       "status": "safe",
       "label": "Good"
     },
     "roubidoux": {
-      "level": 3.77,
-      "flow": 3180.0,
+      "level": 3.63,
+      "flow": 3040.0,
       "flood_stage": 8.0,
-      "pct": 47.1,
+      "pct": 45.4,
       "status": "safe",
       "label": "Good"
     },
@@ -74,10 +74,10 @@
       "label": "Good"
     },
     "huzzah": {
-      "level": 3.8,
-      "flow": 457.0,
+      "level": 3.79,
+      "flow": 453.0,
       "flood_stage": 7.0,
-      "pct": 54.3,
+      "pct": 54.1,
       "status": "safe",
       "label": "Good"
     }
