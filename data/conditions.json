@@ -1,75 +1,75 @@
 {
-  "updated": "2026-03-28T00:18:34Z",
+  "updated": "2026-03-28T06:23:34Z",
   "conditions": {
     "current": {
-      "level": 3.43,
+      "level": 3.42,
       "flow": 1380.0,
       "flood_stage": 8.0,
-      "pct": 42.9,
+      "pct": 42.8,
       "status": "safe",
       "label": "Good"
     },
     "jacksfork": {
-      "level": 0.92,
-      "flow": 69.0,
+      "level": 0.91,
+      "flow": 67.9,
       "flood_stage": 7.0,
-      "pct": 13.1,
+      "pct": 13.0,
       "status": "safe",
       "label": "Good"
     },
     "elevenpoint": {
-      "level": 0.84,
-      "flow": 329.0,
+      "level": 0.83,
+      "flow": 324.0,
       "flood_stage": 9.0,
-      "pct": 9.3,
+      "pct": 9.2,
       "status": "safe",
       "label": "Good"
     },
     "niangua": {
-      "level": 1.76,
-      "flow": 123.0,
+      "level": 1.74,
+      "flow": 119.0,
       "flood_stage": 12.0,
-      "pct": 14.7,
+      "pct": 14.5,
       "status": "safe",
       "label": "Good"
     },
     "gasconade": {
-      "level": 3.05,
-      "flow": 320.0,
+      "level": 3.03,
+      "flow": 314.0,
       "flood_stage": 18.0,
-      "pct": 16.9,
+      "pct": 16.8,
       "status": "safe",
       "label": "Good"
     },
     "meramec": {
-      "level": 2.52,
-      "flow": 62.1,
+      "level": 2.51,
+      "flow": 60.7,
       "flood_stage": 20.0,
       "pct": 12.6,
       "status": "safe",
       "label": "Good"
     },
     "bigpiney": {
-      "level": 4.02,
-      "flow": 4230.0,
+      "level": 3.99,
+      "flow": 4150.0,
       "flood_stage": 10.0,
-      "pct": 40.2,
+      "pct": 39.9,
       "status": "safe",
       "label": "Good"
     },
     "roubidoux": {
-      "level": 3.68,
-      "flow": 3090.0,
+      "level": 3.75,
+      "flow": 3160.0,
       "flood_stage": 8.0,
-      "pct": 46.0,
+      "pct": 46.9,
       "status": "safe",
       "label": "Good"
     },
     "bourbeuse": {
-      "level": 1.34,
-      "flow": 103.0,
+      "level": 1.32,
+      "flow": 100.0,
       "flood_stage": 16.0,
-      "pct": 8.4,
+      "pct": 8.2,
       "status": "safe",
       "label": "Good"
     },
