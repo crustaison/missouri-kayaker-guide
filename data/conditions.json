@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-30T13:01:40Z",
+  "updated": "2026-03-30T19:06:40Z",
   "conditions": {
     "current": {
       "level": 3.31,
@@ -42,26 +42,26 @@
       "label": "Good"
     },
     "meramec": {
-      "level": 2.44,
-      "flow": 51.7,
+      "level": 2.47,
+      "flow": 55.5,
       "flood_stage": 20.0,
-      "pct": 12.2,
+      "pct": 12.4,
       "status": "safe",
       "label": "Good"
     },
     "bigpiney": {
-      "level": 3.38,
-      "flow": 2630.0,
+      "level": 3.06,
+      "flow": 2000.0,
       "flood_stage": 10.0,
-      "pct": 33.8,
+      "pct": 30.6,
       "status": "safe",
       "label": "Good"
     },
     "roubidoux": {
-      "level": 1.44,
-      "flow": 987.0,
+      "level": 1.39,
+      "flow": 945.0,
       "flood_stage": 8.0,
-      "pct": 18.0,
+      "pct": 17.4,
       "status": "safe",
       "label": "Good"
     },
