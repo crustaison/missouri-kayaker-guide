@@ -1,27 +1,27 @@
 {
-  "updated": "2026-03-31T13:21:40Z",
+  "updated": "2026-03-31T19:26:40Z",
   "conditions": {
     "current": {
-      "level": 3.3,
-      "flow": 1270.0,
+      "level": 3.29,
+      "flow": 1260.0,
       "flood_stage": 8.0,
-      "pct": 41.2,
+      "pct": 41.1,
       "status": "safe",
       "label": "Good"
     },
     "jacksfork": {
-      "level": 0.87,
-      "flow": 63.3,
+      "level": 0.86,
+      "flow": 62.2,
       "flood_stage": 7.0,
-      "pct": 12.4,
+      "pct": 12.3,
       "status": "safe",
       "label": "Good"
     },
     "elevenpoint": {
-      "level": 0.82,
-      "flow": 320.0,
+      "level": 0.81,
+      "flow": 315.0,
       "flood_stage": 9.0,
-      "pct": 9.1,
+      "pct": 9.0,
       "status": "safe",
       "label": "Good"
     },
@@ -42,18 +42,18 @@
       "label": "Good"
     },
     "meramec": {
-      "level": 2.43,
-      "flow": 50.4,
+      "level": 2.42,
+      "flow": 49.2,
       "flood_stage": 20.0,
-      "pct": 12.2,
+      "pct": 12.1,
       "status": "safe",
       "label": "Good"
     },
     "bigpiney": {
-      "level": 2.61,
-      "flow": 1310.0,
+      "level": 2.57,
+      "flow": 1570.0,
       "flood_stage": 10.0,
-      "pct": 26.1,
+      "pct": 25.7,
       "status": "safe",
       "label": "Good"
     },
@@ -66,10 +66,10 @@
       "label": "Good"
     },
     "bourbeuse": {
-      "level": 1.19,
-      "flow": 83.5,
+      "level": 1.2,
+      "flow": 84.7,
       "flood_stage": 16.0,
-      "pct": 7.4,
+      "pct": 7.5,
       "status": "safe",
       "label": "Good"
     },
