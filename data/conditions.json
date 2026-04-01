@@ -1,11 +1,11 @@
 {
-  "updated": "2026-04-01T01:31:41Z",
+  "updated": "2026-04-01T07:36:40Z",
   "conditions": {
     "current": {
-      "level": 3.28,
-      "flow": 1250.0,
+      "level": 3.27,
+      "flow": 1240.0,
       "flood_stage": 8.0,
-      "pct": 41.0,
+      "pct": 40.9,
       "status": "safe",
       "label": "Good"
     },
@@ -26,48 +26,48 @@
       "label": "Good"
     },
     "niangua": {
-      "level": 1.73,
-      "flow": 117.0,
+      "level": 1.72,
+      "flow": 115.0,
       "flood_stage": 12.0,
-      "pct": 14.4,
+      "pct": 14.3,
       "status": "safe",
       "label": "Good"
     },
     "gasconade": {
-      "level": 2.9,
-      "flow": 271.0,
+      "level": 2.89,
+      "flow": 268.0,
       "flood_stage": 18.0,
       "pct": 16.1,
       "status": "safe",
       "label": "Good"
     },
     "meramec": {
-      "level": 2.41,
-      "flow": 48.0,
+      "level": 2.4,
+      "flow": 46.8,
       "flood_stage": 20.0,
-      "pct": 12.1,
+      "pct": 12.0,
       "status": "safe",
       "label": "Good"
     },
     "bigpiney": {
-      "level": 2.56,
-      "flow": 1560.0,
+      "level": 2.55,
+      "flow": 1540.0,
       "flood_stage": 10.0,
-      "pct": 25.6,
+      "pct": 25.5,
       "status": "safe",
       "label": "Good"
     },
     "roubidoux": {
-      "level": 1.41,
-      "flow": 962.0,
+      "level": 1.36,
+      "flow": 920.0,
       "flood_stage": 8.0,
-      "pct": 17.6,
+      "pct": 17.0,
       "status": "safe",
       "label": "Good"
     },
     "bourbeuse": {
-      "level": 1.19,
-      "flow": 83.5,
+      "level": 1.18,
+      "flow": 82.3,
       "flood_stage": 16.0,
       "pct": 7.4,
       "status": "safe",
