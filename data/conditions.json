@@ -1,19 +1,19 @@
 {
-  "updated": "2026-04-03T08:16:40Z",
+  "updated": "2026-04-03T14:21:40Z",
   "conditions": {
     "current": {
-      "level": 3.31,
-      "flow": 1280.0,
+      "level": 3.29,
+      "flow": 1260.0,
       "flood_stage": 8.0,
-      "pct": 41.4,
+      "pct": 41.1,
       "status": "safe",
       "label": "Good"
     },
     "jacksfork": {
-      "level": 0.91,
-      "flow": 67.9,
+      "level": 0.9,
+      "flow": 66.7,
       "flood_stage": 7.0,
-      "pct": 13.0,
+      "pct": 12.9,
       "status": "safe",
       "label": "Good"
     },
@@ -34,50 +34,50 @@
       "label": "Good"
     },
     "gasconade": {
-      "level": 3.26,
-      "flow": 399.0,
+      "level": 3.22,
+      "flow": 383.0,
       "flood_stage": 18.0,
-      "pct": 18.1,
+      "pct": 17.9,
       "status": "safe",
       "label": "Good"
     },
     "meramec": {
-      "level": 2.57,
-      "flow": 69.0,
+      "level": 2.56,
+      "flow": 67.6,
       "flood_stage": 20.0,
       "pct": 12.8,
       "status": "safe",
       "label": "Good"
     },
     "bigpiney": {
-      "level": 4.27,
-      "flow": 5420.0,
+      "level": 7.34,
+      "flow": 14000.0,
       "flood_stage": 10.0,
-      "pct": 42.7,
-      "status": "safe",
-      "label": "Good"
+      "pct": 73.4,
+      "status": "warning",
+      "label": "Caution"
     },
     "roubidoux": {
-      "level": 12.58,
-      "flow": 22200.0,
+      "level": 13.5,
+      "flow": 25400.0,
       "flood_stage": 8.0,
-      "pct": 157.2,
+      "pct": 168.8,
       "status": "danger",
       "label": "Danger"
     },
     "bourbeuse": {
-      "level": 1.29,
-      "flow": 96.2,
+      "level": 1.28,
+      "flow": 94.9,
       "flood_stage": 16.0,
-      "pct": 8.1,
+      "pct": 8.0,
       "status": "safe",
       "label": "Good"
     },
     "huzzah": {
-      "level": 3.87,
-      "flow": 489.0,
+      "level": 3.85,
+      "flow": 480.0,
       "flood_stage": 7.0,
-      "pct": 55.3,
+      "pct": 55.0,
       "status": "warning",
       "label": "Caution"
     }
