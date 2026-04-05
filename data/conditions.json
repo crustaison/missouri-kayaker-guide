@@ -1,19 +1,19 @@
 {
-  "updated": "2026-04-05T02:51:37Z",
+  "updated": "2026-04-05T08:52:19Z",
   "conditions": {
     "current": {
-      "level": 3.41,
-      "flow": 1370.0,
+      "level": 3.49,
+      "flow": 1440.0,
       "flood_stage": 8.0,
-      "pct": 42.6,
+      "pct": 43.6,
       "status": "safe",
       "label": "Good"
     },
     "jacksfork": {
-      "level": 1.19,
-      "flow": 105.0,
+      "level": 1.36,
+      "flow": 132.0,
       "flood_stage": 7.0,
-      "pct": 17.0,
+      "pct": 19.4,
       "status": "safe",
       "label": "Good"
     },
@@ -26,58 +26,58 @@
       "label": "Good"
     },
     "niangua": {
-      "level": 3.04,
-      "flow": 546.0,
+      "level": 2.88,
+      "flow": 482.0,
       "flood_stage": 12.0,
-      "pct": 25.3,
+      "pct": 24.0,
       "status": "safe",
       "label": "Good"
     },
     "gasconade": {
-      "level": 3.58,
-      "flow": 544.0,
+      "level": 3.63,
+      "flow": 570.0,
       "flood_stage": 18.0,
-      "pct": 19.9,
+      "pct": 20.2,
       "status": "safe",
       "label": "Good"
     },
     "meramec": {
-      "level": 3.47,
-      "flow": 243.0,
+      "level": 3.44,
+      "flow": 236.0,
       "flood_stage": 20.0,
-      "pct": 17.4,
+      "pct": 17.2,
       "status": "safe",
       "label": "Good"
     },
     "bigpiney": {
-      "level": 12.25,
-      "flow": 31700.0,
+      "level": 12.14,
+      "flow": 31300.0,
       "flood_stage": 10.0,
-      "pct": 122.5,
+      "pct": 121.4,
       "status": "danger",
       "label": "Danger"
     },
     "roubidoux": {
-      "level": 13.74,
-      "flow": 26300.0,
+      "level": 13.72,
+      "flow": 26200.0,
       "flood_stage": 8.0,
-      "pct": 171.8,
+      "pct": 171.5,
       "status": "danger",
       "label": "Danger"
     },
     "bourbeuse": {
-      "level": 2.41,
-      "flow": 305.0,
+      "level": 2.32,
+      "flow": 284.0,
       "flood_stage": 16.0,
-      "pct": 15.1,
+      "pct": 14.5,
       "status": "safe",
       "label": "Good"
     },
     "huzzah": {
-      "level": 4.58,
-      "flow": 863.0,
+      "level": 4.52,
+      "flow": 826.0,
       "flood_stage": 7.0,
-      "pct": 65.4,
+      "pct": 64.6,
       "status": "warning",
       "label": "Caution"
     }
