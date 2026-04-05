@@ -1,19 +1,19 @@
 {
-  "updated": "2026-04-05T14:56:37Z",
+  "updated": "2026-04-05T21:02:18Z",
   "conditions": {
     "current": {
-      "level": 3.53,
-      "flow": 1480.0,
+      "level": 3.52,
+      "flow": 1470.0,
       "flood_stage": 8.0,
-      "pct": 44.1,
+      "pct": 44.0,
       "status": "safe",
       "label": "Good"
     },
     "jacksfork": {
-      "level": 1.33,
-      "flow": 127.0,
+      "level": 1.3,
+      "flow": 122.0,
       "flood_stage": 7.0,
-      "pct": 19.0,
+      "pct": 18.6,
       "status": "safe",
       "label": "Good"
     },
@@ -26,10 +26,10 @@
       "label": "Good"
     },
     "niangua": {
-      "level": 2.76,
-      "flow": 435.0,
+      "level": 2.67,
+      "flow": 398.0,
       "flood_stage": 12.0,
-      "pct": 23.0,
+      "pct": 22.2,
       "status": "safe",
       "label": "Good"
     },
@@ -42,42 +42,42 @@
       "label": "Good"
     },
     "meramec": {
-      "level": 3.4,
-      "flow": 226.0,
+      "level": 3.32,
+      "flow": 207.0,
       "flood_stage": 20.0,
-      "pct": 17.0,
+      "pct": 16.6,
       "status": "safe",
       "label": "Good"
     },
     "bigpiney": {
-      "level": 11.93,
-      "flow": 30500.0,
+      "level": 11.75,
+      "flow": 29800.0,
       "flood_stage": 10.0,
-      "pct": 119.3,
+      "pct": 117.5,
       "status": "danger",
       "label": "Danger"
     },
     "roubidoux": {
-      "level": 13.6,
-      "flow": 25800.0,
+      "level": 13.62,
+      "flow": 25900.0,
       "flood_stage": 8.0,
-      "pct": 170.0,
+      "pct": 170.2,
       "status": "danger",
       "label": "Danger"
     },
     "bourbeuse": {
-      "level": 2.16,
-      "flow": 248.0,
+      "level": 2.04,
+      "flow": 222.0,
       "flood_stage": 16.0,
-      "pct": 13.5,
+      "pct": 12.8,
       "status": "safe",
       "label": "Good"
     },
     "huzzah": {
-      "level": 4.45,
-      "flow": 784.0,
+      "level": 4.37,
+      "flow": 738.0,
       "flood_stage": 7.0,
-      "pct": 63.6,
+      "pct": 62.4,
       "status": "warning",
       "label": "Caution"
     }
