@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-10T10:31:36Z",
+  "updated": "2026-04-10T16:32:58Z",
   "conditions": {
     "current": {
       "level": 3.29,
@@ -10,10 +10,10 @@
       "label": "Good"
     },
     "jacksfork": {
-      "level": 0.96,
-      "flow": 73.9,
+      "level": 0.95,
+      "flow": 72.6,
       "flood_stage": 7.0,
-      "pct": 13.7,
+      "pct": 13.6,
       "status": "safe",
       "label": "Good"
     },
@@ -26,58 +26,58 @@
       "label": "Good"
     },
     "niangua": {
-      "level": 2.05,
-      "flow": 224.0,
+      "level": 2.03,
+      "flow": 218.0,
       "flood_stage": 12.0,
-      "pct": 17.1,
+      "pct": 16.9,
       "status": "safe",
       "label": "Good"
     },
     "gasconade": {
-      "level": 3.12,
-      "flow": 345.0,
+      "level": 3.1,
+      "flow": 338.0,
       "flood_stage": 18.0,
-      "pct": 17.3,
+      "pct": 17.2,
       "status": "safe",
       "label": "Good"
     },
     "meramec": {
-      "level": 2.63,
-      "flow": 93.3,
+      "level": 2.61,
+      "flow": 90.1,
       "flood_stage": 20.0,
-      "pct": 13.2,
+      "pct": 13.1,
       "status": "safe",
       "label": "Good"
     },
     "bigpiney": {
-      "level": 11.67,
-      "flow": 29500.0,
+      "level": 10.87,
+      "flow": 26600.0,
       "flood_stage": 10.0,
-      "pct": 116.7,
+      "pct": 108.7,
       "status": "danger",
       "label": "Danger"
     },
     "roubidoux": {
-      "level": 9.93,
-      "flow": 13900.0,
+      "level": 10.58,
+      "flow": 15800.0,
       "flood_stage": 8.0,
-      "pct": 124.1,
+      "pct": 132.2,
       "status": "danger",
       "label": "Danger"
     },
     "bourbeuse": {
-      "level": 1.36,
-      "flow": 106.0,
+      "level": 1.35,
+      "flow": 104.0,
       "flood_stage": 16.0,
-      "pct": 8.5,
+      "pct": 8.4,
       "status": "safe",
       "label": "Good"
     },
     "huzzah": {
-      "level": 3.81,
-      "flow": 184.0,
+      "level": 3.8,
+      "flow": 181.0,
       "flood_stage": 7.0,
-      "pct": 54.4,
+      "pct": 54.3,
       "status": "safe",
       "label": "Good"
     }
