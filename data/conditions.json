@@ -1,19 +1,19 @@
 {
-  "updated": "2026-04-17T00:37:58Z",
+  "updated": "2026-04-17T06:42:58Z",
   "conditions": {
     "current": {
-      "level": 3.36,
-      "flow": 1320.0,
+      "level": 3.38,
+      "flow": 1340.0,
       "flood_stage": 8.0,
-      "pct": 42.0,
+      "pct": 42.2,
       "status": "safe",
       "label": "Good"
     },
     "jacksfork": {
-      "level": 1.92,
-      "flow": 276.0,
+      "level": 1.77,
+      "flow": 239.0,
       "flood_stage": 7.0,
-      "pct": 27.4,
+      "pct": 25.3,
       "status": "safe",
       "label": "Good"
     },
@@ -26,34 +26,34 @@
       "label": "Good"
     },
     "niangua": {
-      "level": 3.21,
-      "flow": 662.0,
+      "level": 3.06,
+      "flow": 599.0,
       "flood_stage": 12.0,
-      "pct": 26.8,
+      "pct": 25.5,
       "status": "safe",
       "label": "Good"
     },
     "gasconade": {
-      "level": 3.72,
-      "flow": 618.0,
+      "level": 3.99,
+      "flow": 779.0,
       "flood_stage": 18.0,
-      "pct": 20.7,
+      "pct": 22.2,
       "status": "safe",
       "label": "Good"
     },
     "meramec": {
-      "level": 3.03,
-      "flow": 167.0,
+      "level": 3.22,
+      "flow": 207.0,
       "flood_stage": 20.0,
-      "pct": 15.2,
+      "pct": 16.1,
       "status": "safe",
       "label": "Good"
     },
     "bigpiney": {
-      "level": 10.44,
-      "flow": 25000.0,
+      "level": 11.86,
+      "flow": 30200.0,
       "flood_stage": 10.0,
-      "pct": 104.4,
+      "pct": 118.6,
       "status": "danger",
       "label": "Danger"
     },
@@ -66,18 +66,18 @@
       "label": "Danger"
     },
     "bourbeuse": {
-      "level": 3.24,
-      "flow": 506.0,
+      "level": 3.17,
+      "flow": 487.0,
       "flood_stage": 16.0,
-      "pct": 20.2,
+      "pct": 19.8,
       "status": "safe",
       "label": "Good"
     },
     "huzzah": {
-      "level": 4.21,
-      "flow": 312.0,
+      "level": 4.46,
+      "flow": 416.0,
       "flood_stage": 7.0,
-      "pct": 60.1,
+      "pct": 63.7,
       "status": "warning",
       "label": "Caution"
     }
