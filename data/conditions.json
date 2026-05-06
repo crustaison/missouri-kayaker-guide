@@ -1,19 +1,19 @@
 {
-  "updated": "2026-05-06T11:51:19Z",
+  "updated": "2026-05-06T17:56:19Z",
   "conditions": {
     "current": {
-      "level": 4.0,
-      "flow": 1970.0,
+      "level": 3.99,
+      "flow": 1950.0,
       "flood_stage": 8.0,
-      "pct": 50.0,
+      "pct": 49.9,
       "status": "safe",
       "label": "Good"
     },
     "jacksfork": {
-      "level": 1.23,
-      "flow": 129.0,
+      "level": 1.21,
+      "flow": 126.0,
       "flood_stage": 7.0,
-      "pct": 17.6,
+      "pct": 17.3,
       "status": "safe",
       "label": "Good"
     },
@@ -34,50 +34,50 @@
       "label": "Good"
     },
     "gasconade": {
-      "level": 3.43,
-      "flow": 491.0,
+      "level": 3.39,
+      "flow": 472.0,
       "flood_stage": 18.0,
-      "pct": 19.1,
+      "pct": 18.8,
       "status": "safe",
       "label": "Good"
     },
     "meramec": {
-      "level": 2.67,
-      "flow": 99.8,
+      "level": 2.65,
+      "flow": 96.5,
       "flood_stage": 20.0,
-      "pct": 13.4,
+      "pct": 13.2,
       "status": "safe",
       "label": "Good"
     },
     "bigpiney": {
-      "level": 12.84,
-      "flow": 34000.0,
+      "level": 13.13,
+      "flow": 35200.0,
       "flood_stage": 10.0,
-      "pct": 128.4,
+      "pct": 131.3,
       "status": "danger",
       "label": "Danger"
     },
     "roubidoux": {
-      "level": 16.3,
-      "flow": 35600.0,
+      "level": 16.38,
+      "flow": 35800.0,
       "flood_stage": 8.0,
-      "pct": 203.8,
+      "pct": 204.8,
       "status": "danger",
       "label": "Danger"
     },
     "bourbeuse": {
-      "level": 2.33,
-      "flow": 286.0,
+      "level": 2.35,
+      "flow": 291.0,
       "flood_stage": 16.0,
-      "pct": 14.6,
+      "pct": 14.7,
       "status": "safe",
       "label": "Good"
     },
     "huzzah": {
-      "level": 3.99,
-      "flow": 230.0,
+      "level": 4.02,
+      "flow": 241.0,
       "flood_stage": 7.0,
-      "pct": 57.0,
+      "pct": 57.4,
       "status": "warning",
       "label": "Caution"
     }
