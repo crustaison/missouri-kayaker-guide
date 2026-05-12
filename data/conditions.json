@@ -1,19 +1,19 @@
 {
-  "updated": "2026-05-12T01:37:05Z",
+  "updated": "2026-05-12T07:42:05Z",
   "conditions": {
     "current": {
-      "level": 3.44,
-      "flow": 1390.0,
+      "level": 3.43,
+      "flow": 1380.0,
       "flood_stage": 8.0,
-      "pct": 43.0,
+      "pct": 42.9,
       "status": "safe",
       "label": "Good"
     },
     "jacksfork": {
-      "level": 0.9,
-      "flow": 80.1,
+      "level": 0.89,
+      "flow": 78.8,
       "flood_stage": 7.0,
-      "pct": 12.9,
+      "pct": 12.7,
       "status": "safe",
       "label": "Good"
     },
@@ -26,18 +26,18 @@
       "label": "Good"
     },
     "niangua": {
-      "level": 2.0,
-      "flow": 209.0,
+      "level": 1.99,
+      "flow": 207.0,
       "flood_stage": 12.0,
-      "pct": 16.7,
+      "pct": 16.6,
       "status": "safe",
       "label": "Good"
     },
     "gasconade": {
-      "level": 3.02,
-      "flow": 324.0,
+      "level": 3.0,
+      "flow": 317.0,
       "flood_stage": 18.0,
-      "pct": 16.8,
+      "pct": 16.7,
       "status": "safe",
       "label": "Good"
     },
@@ -50,36 +50,36 @@
       "label": "Good"
     },
     "bigpiney": {
-      "level": 11.58,
-      "flow": 29200.0,
+      "level": 12.26,
+      "flow": 31700.0,
       "flood_stage": 10.0,
-      "pct": 115.8,
+      "pct": 122.6,
       "status": "danger",
       "label": "Danger"
     },
     "roubidoux": {
-      "level": 16.02,
-      "flow": 34700.0,
+      "level": 15.01,
+      "flow": 31100.0,
       "flood_stage": 8.0,
-      "pct": 200.2,
+      "pct": 187.6,
       "status": "danger",
       "label": "Danger"
     },
     "bourbeuse": {
-      "level": 1.43,
-      "flow": 116.0,
+      "level": 1.39,
+      "flow": 110.0,
       "flood_stage": 16.0,
-      "pct": 8.9,
+      "pct": 8.7,
       "status": "safe",
       "label": "Good"
     },
     "huzzah": {
-      "level": 3.85,
-      "flow": 193.0,
+      "level": 3.83,
+      "flow": 188.0,
       "flood_stage": 7.0,
-      "pct": 55.0,
-      "status": "warning",
-      "label": "Caution"
+      "pct": 54.7,
+      "status": "safe",
+      "label": "Good"
     }
   }
 }
